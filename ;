@@ -1,0 +1,17 @@
+from textual.app import App, ComposeResult
+from textual.widgets import Image
+from textual.containers import Container
+
+
+class Tamagotchi(App):
+    CSS_PATH = "styles.css"
+
+    def compose(self) -> Compe:
+        yield Container(
+            Image("faces/idle-face.png"),
+            id="centerContainer",
+        )
+
+
+if __name__ == "__main__":
+    Tamagotchi().run()
